@@ -18,6 +18,15 @@
         };
     };
 
+    macros {
+        gamebar: gamebar {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_GUI &kp G>;
+            label = "GAMEBAR";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -81,8 +90,8 @@
         Game {
             bindings = <
 &kp TAB           &trans  &trans  &trans  &trans     &kp ESC    &trans  &trans  &trans  &trans  &trans  &trans
-&kp LEFT_CONTROL  &trans  &trans  &trans  &trans     &trans     &trans  &trans  &trans  &trans  &trans  &trans
-&kp LEFT_SHIFT    &trans  &trans  &trans  &trans     &trans     &trans  &trans  &trans  &trans  &trans  &trans
+&kp LEFT_CONTROL  &trans  &trans  &trans  &trans     &trans     &trans  &trans  &trans  &trans  &trans  &kp RIGHT_GUI
+&kp LEFT_SHIFT    &trans  &trans  &trans  &trans     &trans     &trans  &trans  &trans  &trans  &trans  &gamebar
                                   &none   &kp SPACE  &trans     &trans  &trans  &trans
             >;
         };
